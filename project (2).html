@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <style>
+	//overall css//
+	*{
+    margin: 0;
+    padding: 0;
+}
+/*starting main page css*/
+  .main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(NIGHT.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height:100vh;
+	height: auto;
+	overflow-x:scroll;
+   max-width:100%;
+}
+/*Ending main page css*/
+
+/*nav bar css*/
+.navbar{
+    width:100%;
+    height: 75px;
+    margin-left: 20px;;
+}
+/*side nav bar css*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#001B35;
+  overflow:scroll;
+  transition: 0.5s;
+  padding-top: 24px;
+  padding-bottom:10px;
+  z-index:1001;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  display: inline-block;
+  justify-content:left;
+  transition: 0.3s;
+}
+
+
+.sidenav:hover {
+  color: #ff7200;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav a:hover{
+    color: #ff7200;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*logo css*/
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    float: left;
+    padding-top: 20px;
+    margin-top: 18px;
+	margin-left:100px;
+}
+/*navigational links css*/
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+#hover{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:50px;
+}
+
+#hover li{
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+#hover li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+#hover li a:hover{
+    color: #ff7200;
+}
+
+.content{
+	justify-content:left;
+    margin-left:10%;
+    width:auto;
+    height: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    margin-right:50%;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 8%;
+    letter-spacing: 2px;
+}
+
+
+
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+/*form css*/
+.form{
+    width: auto;
+    height: auto;
+    background: #fff;
+	color:black;
+    position: absolute;
+    top: 100px;
+    margin-left: 55%;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+#rank{
+margin-top:20px;
+height:22px;
+}
+#radio{
+margin-top:20px;
+}
+#caste{
+	margin-top:20px;
+	height:23px;
+}
+#branchname{
+	margin-top:20px;
+	width:150px;
+}
+#district{
+	margin-top:20px;
+	height:23px;
+}
+
+#button{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color:black;
+    transition: 0.4s ease;
+}
+
+	</style>
+</head>
+<body>
+    <div class="main">
+
+       <div class="navbar">
+		<div id="mySidenav" class="sidenav">
+           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		                <b> <h4 style="font-size:20px;color:white;text-align:center">*Select Predict Type*</h4><b>
+						    <a href="District.html"><li><strong>Predict with Caste,District </strong></li></a>
+						    <a href="project1.html"><li><strong>Predict with Rank,Gender,Caste </strong></li></a>
+							<a href="project2.html"><li><strong>Predict with Rank,Gender,Branch,District </strong></li></a>
+							<a href="rcdb.html"><li><strong>Predict with Rank,Caste,District,Branch </strong></li></a>
+							<a href="rgcd.html"><li><strong>Predict with Rank,Gender,Caste,District</strong></li></a>
+							<a href="gcdb.html"><li><strong>Predict with Gender,Caste,District,Branch</strong></li></a>
+							<a href="rgcb.html"><li><strong>Predict with Rank,Gender,Caste,Branch</strong></li></a>
+							<a href="rgb.html"><li><strong>Predict with Rank,Gender,Branch</strong></li></a>
+							<a href="rgd.html"><li><strong>Predict with Rank,Gender,District</strong></li></a>
+							<a href="rcb.html"><li><strong>Predict with Rank,Caste,Branch </strong></li></a>
+							<a href="rcd.html"><li><strong>Predict with Rank,Caste,District </strong></li></a>
+								<a href="individual.html"><li><strong>Predict with District </strong></li></a>
+								<a href="individual1.html"><li><strong>Predict with Branch </strong></li></a>
+							
+        </div>
+		<span style="font-size:30px;cursor:pointer;color:white;float:left;margin-left:3%;padding-top:30px;" onclick="openNav()">&#9776</span>
+
+        <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+               }
+
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+               }
+		</script>
+	
+            <div class="icon">
+                <h4 class="logo">way2predict</h4>
+            </div>
+	
+
+            <div class="menu">
+                <ul id="hover">
+					<li><a href="College.html">DIPLOMA BRANCHES</a></li>
+					<li><a href="https://polycetap.nic.in/rank_card_2022.aspx">RESULTS</a></li>
+                    <li><a href="contactus.html">CONTACT</a></li>
+						<li><a href="aboutus.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="content">
+            <h1>College <br><span>Prediction</span> <br>System</h1>
+            <p class="par">"Life is a matter of choices, and every choice you make makes you". The application uses data mining
+and data analysis techniques. Rank, category, preferred branches, preferred district, and
+preferred colleges are taken as input and the preference list, on thorough analysis of the
+last years' cut-off data is generated.</p>
+<p style="font-size:22px">NOTE:*User can either choose prediction type by clicking on "MENU BUTTON"*</p>
+  
+
+                <div class="form">
+				<form action="all.php" method="post">
+                    <h2>ENTER DETAILS</h2>
+                      RANK:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="rank" type="number" name="rank" placeholder="Enter Rank Here"><br/>
+		            GENDER:&nbsp&nbspMALE:<input id="radio" type="radio" name="gender" value="M">&nbsp &nbsp&nbsp&nbsp&nbsp
+					FEMALE:<input id="radio" type="radio" name="gender" value="F"><br/>
+					CASTE:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select id="caste" name="caste">
+					           <option>--Select--</option>
+					           <option>OC</option>
+							   <option>BC_A</option>
+							   <option>BC_B</option>
+							   <option>BC_C</option>
+							   <option>BC_D</option>
+							   <option>BC_E</option>
+							   <option>SC</option>
+							   <option>ST</option>
+							   <option>OTHERS</option>
+							   </SELECT><br/><br/>
+					BRANCH:&nbsp&nbsp&nbsp&nbsp<select id="branchname" name="branchname">
+					           <option>--SELECT--</option>
+					           <option>COMPUTER ENGINEERING</option>
+							   <option>CIVIL ENGINEERING</option>
+							   <option>ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+							   <option>ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+							   <option>MECHANICAL ENGINEERING</option>
+							   <option>MINING ENGINEERING</option>
+							   <option>APPL. ELECTRONICS AND INSTRUMENTATION ENGINEERING</option>
+							     <option>3-D ANIMATION & GRAPHICS</option>
+								   <option>ARCHITECTURAL ASSISTANTSHIP</option>
+								     <option>AUTOMOBILE ENGINEERING</option>
+									   <option>COMP SCI AND ENGG (ARTIFICIAL INTELLIGENCE)</option>
+									     <option>CHEMICAL ENGINEERING [SUGAR TECHNOLOGY]</option>
+										   <option>ELECTRONICS COMMUNICATION & INSTRUMENTATION</option>
+										     <option>PACKAGING TECHNOLOGY</option>
+											   <option>WEB DESIGNING</option>
+											     <option>COMMERCIAL AND COMPUTER PRACTICE</option>
+												   <option>GARMENT TECHNOLOGY</option>
+												     <option>ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</option>
+													   <option>BIO-MEDICAL ENGINEERING [SANDWICH]</option>
+													     <option>CLOUD COMPUTING AND BIG DATA</option>
+														   <option>COMMUNICATION AND COMPUTER NETWORKING</option>
+														     <option>CERAMIC TECHNOLOGY</option>
+															   <option>CHEMICAL ENGINEERING</option>
+															     <option>CHEMICAL ENGINEERING [OIL TECHNOLOGY]</option>
+																   <option>CHEMICAL ENGINEERING [PETROCHEMICALS]</option>
+																     <option>CHEMICAL ENGINEERING [PLASTICS AND POLYMERS]</option>
+																	   <option>METALLURGICAL ENGINEERING</option>
+																	     <option>PETROLEUM TECHNOLOGY</option>
+																		   <option>TEXTILE TECHNOLOGY</option>
+																		   <option>AUTOMOBILE SERVICING(DIPLOMA IN VOCATIONAL)</option>
+																		   <option>COMPUTER SCIENCE(DIPLOMA IN VOCATIONAL)</option>
+																		   <option>ELECTRICAL APPLIANCES MAINTENANCE & REPAIRING(DIP IN VOC)</option>
+																		   <option>MOBILE COMMUNICATION(DIPLOMA IN VOCATIONAL)</option>
+																		   <option>REFRIGERATION AND AIR CONDITIONING(DIP IN VOC)</option>
+							   </SELECT><br/>
+				    DISTRICT:&nbsp&nbsp&nbsp<select id="district" name="district">
+								<option>--Select--</option>
+								<option>West Godavari</option>
+							    <option>East Godavari</option>
+								<option>KRISHNA</option>
+								<option>Chittoor</option>
+								<option>Vizianagaram</option>
+								<option>Anantapur</option>
+								<option>YSR Kadapa</option>
+								<option>Guntur</option>
+								<option>Nellore</option>
+								<option>kurnool</option>
+								<option>Srikakulam</option>
+								<option>Visakhapatnam</option>
+								<option>Prakasam</option>
+								</select><br/>
+                   <center><input id="button" className="btn-6" type="submit" name="predict" value="PREDICT"></input></a></center>
+
+               
+                </div> 
+				   
+                    </div>
+                </div>
+</form></body>
+
+</html>
